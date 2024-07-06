@@ -9,11 +9,12 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-// import { useTheme } from "@/context/theme-context";
+import { useTheme } from "@/context/theme-context";
+import Link from "next/link";
 
 export default function Experience() {
   const { ref } = useSectionInView("Experience");
-  //   const { theme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
@@ -25,19 +26,24 @@ export default function Experience() {
               <VerticalTimelineElement
                 visible={true}
                 contentStyle={{
-                  background: "#f3f4f6",
+                  background:
+                    theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                   boxShadow: "none",
                   border: "1px solid rgba(0, 0, 0, 0.05)",
                   textAlign: "left",
                   padding: "1.3rem 2rem",
                 }}
                 contentArrowStyle={{
-                  borderRight: "0.4rem solid rgba(255, 255, 255, 0.5)",
+                  borderRight:
+                    theme === "light"
+                      ? "0.4rem solid #9ca3af"
+                      : "0.4rem solid rgba(255, 255, 255, 0.5)",
                 }}
                 date={item.date}
                 icon={item.icon}
                 iconStyle={{
-                  background: "#f3f4f6",
+                  background:
+                    theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
                   fontSize: "1.5rem",
                 }}
               >
@@ -46,6 +52,14 @@ export default function Experience() {
                 <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                   {item.description}
                 </p>
+                <div>
+                  Link website:{" "}
+                  <a href="https://dev.suzu.net" target="_blank">
+                    <span className="underline text-blue-500">
+                      {item?.link}
+                    </span>
+                  </a>
+                </div>
               </VerticalTimelineElement>
             </React.Fragment>
           );

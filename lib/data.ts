@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import abbottImage from "@/public/logo-abbott.jpeg";
+import suzuNetworkImage from "@/public/suzu-network.png";
+import { link } from "fs";
 
 export const links = [
   {
@@ -35,52 +35,56 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Fresher Magento 2 Developer",
+    location: "FPT Software Ho Chi Minh City, Vietnam",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Received Magento 2 training at FPT Software to participate in the US Canon project.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    link: "",
+    date: "12/2021 - 4/2022",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Front-End React Developer",
+    location: "FPT Software Ho Chi Minh City, Vietnam",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Mainly responsible for the Front-end position, developing features and providing high user experience. I also upskilled to the full stack.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    link: "",
+    date: "5/2022 - 4/2023",
   },
   {
     title: "Full-Stack Developer",
-    location: "Houston, TX",
+    location: "Suzu Group, Ho Chi Minh City, Vietnam",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      "I'm now a full-stack developer, build social networks at Suzu Group. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and PostgreSLQ. I'm open to full-time opportunities.",
     icon: React.createElement(FaReact),
-    date: "2021 - present",
+    link: "dev.suzu.net",
+    date: "5/2023 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "WareHouse Management system",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Warehouse management system helps improve manual operations and shorten operating time.",
+    tags: [
+      "ReactJs",
+      "NestJs",
+      "JavaScript",
+      "Antd Design",
+      "PostgreSQL",
+      "Redux",
+      "Redis",
+    ],
+    imageUrl: abbottImage,
   },
   {
-    title: "rmtDev",
+    title: "Suzu Network",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Social networks similar to Instagram, Facebook,... allow users to freely post statuses, upload videos, and images to the internet.",
+    tags: ["TurboRepo, React", "Next.js", "PostgreSQL", "Tailwind Css"],
+    imageUrl: suzuNetworkImage,
   },
 ] as const;
 

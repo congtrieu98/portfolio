@@ -4,7 +4,6 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import abbottImage from "@/public/logo-abbott.jpeg";
 import suzuNetworkImage from "@/public/suzu-network.png";
-import { link } from "fs";
 
 export const links = [
   {
@@ -41,7 +40,7 @@ export const experiencesData = [
       "Received Magento 2 training at FPT Software to participate in the US Canon project.",
     icon: React.createElement(LuGraduationCap),
     link: "",
-    date: "12/2021 - 4/2022",
+    date: "3/2021 - 7/2021",
   },
   {
     title: "Front-End React Developer",
@@ -50,7 +49,7 @@ export const experiencesData = [
       "Mainly responsible for the Front-end position, developing features and providing high user experience. I also upskilled to the full stack.",
     icon: React.createElement(CgWorkAlt),
     link: "",
-    date: "5/2022 - 4/2023",
+    date: "7/2021 - 4/2023",
   },
   {
     title: "Full-Stack Developer",
